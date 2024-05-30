@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="header">
+        <div><h1>devfinder</h1></div>
+        <div id="darkMode">
+          <span class="dark">dark</span>
+          <img src="./assets/moon.svg" alt="moon-icon" />
+        </div>
+      </div>
+      <div class="input">
+        <img class="search" src="./assets/Combined Shape.svg" alt="loop" />
+        <div class="searching-place">
+          <input placeholder="Search GitHub username…" type="text" id="inp" />
+          <button id="search">search</button>
+        </div>
+      </div>
+      <div id="acc">
+        <div class="avatar"></div>
+        <div class="results">
+          <div id="name">
+            <h2 id="userName"></h2>
+            <span id="joinedDate"></span>
+          </div>
+          <div id="bio"><p id="profileBio"></p></div>
+          <div class="result-numbers">
+            <div class="names">
+              <span id="repos">Repos</span><span id="followers">Followers</span
+              ><span id="following">Following</span>
+            </div>
+            <div class="numbers">
+              <span id="repNum"></span><span id="folNum"></span
+              ><span id="followingNum"></span>
+            </div>
+          </div>
+          <div class="social">
+            <div class="social-up">
+              <div class="location soc-container">
+                <img class="soc-icon" src="./assets/003-pin.svg" alt="pin" />
+                <span id="adress"></span>
+              </div>
+              <div class="twitter soc-container">
+                <img
+                  class="soc-icon"
+                  src="./assets/004-twitter.svg"
+                  alt="twitter-icon"
+                />
+                <span id="twitter"></span>
+              </div>
+            </div>
+            <div class="social-down">
+              <div class="link soc-container">
+                <img class="soc-icon" src="./assets/002-url.png" alt="url" />
+                <span id="githubLink"></span>
+              </div>
+              <div class="company-icon soc-container">
+                <img
+                  class="soc-icon"
+                  src="./assets/001-office-building.svg"
+                  alt="building"
+                />
+                <span id="company"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
