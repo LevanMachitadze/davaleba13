@@ -58,11 +58,36 @@ function mainFunction() {
     });
 }
 
-btn.addEventListener('click', function (event) {
+btn.addEventListener('click', function () {
   mainFunction();
 });
 inp.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
     mainFunction();
+  }
+});
+
+let dark = document.getElementById('darkMode');
+let icn = document.getElementById('modes');
+let darkLight = document.querySelector('.dark');
+
+let i = 1;
+
+dark.addEventListener('click', function (event) {
+  document.body.classList.toggle('dark-mode');
+  document.querySelector('.header').classList.toggle('dark-mode');
+  document.querySelector('.dark').classList.toggle('dark-mode');
+  document.querySelector('.input').classList.toggle('dark-mode');
+  document.querySelector('#acc').classList.toggle('dark-mode');
+  document.querySelector('#joinedDate').classList.toggle('dark-mode');
+  document.querySelector('.result-numbers').classList.toggle('dark-mode');
+  document.querySelector('.social').classList.toggle('dark-mode');
+  i = i++;
+  if (i++ % 2 !== 0) {
+    icn.src = './assets/002-sun.svg';
+    darkLight.textContent = 'Light';
+  } else {
+    icn.src = './assets/moon.svg';
+    darkLight.textContent = 'Dark';
   }
 });

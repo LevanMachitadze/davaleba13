@@ -85,7 +85,6 @@ body {
   border-radius: 15px;
   background-color: var(--seventh-color);
   padding: 48px;
-  /* display: flex; */
   display: none;
 }
 .avatar {
@@ -161,4 +160,30 @@ body {
 }
 #githubLink:hover {
   text-decoration: underline;
+}
+body.dark-mode {
+  background-color: var(--dark-two);
+}
+.header.dark-mode {
+  color: var(--dark-one);
+}
+.dark.dark-mode {
+  color: var(--dark-one);
+}
+.input.dark-mode {
+  background-color: var(--dark-three);
+}
+#acc.dark-mode {
+  background-color: var(--dark-three);
+  color: var(--dark-one);
+}
+#joinedDate.dark-mode {
+  color: var(--dark-one);
+}
+.result-numbers.dark-mode {
+  background-color: var(--dark-two);
+  color: var(--dark-one);
+}
+.social.dark-mode {
+  color: var(--dark-one);
 }
