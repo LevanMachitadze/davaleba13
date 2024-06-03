@@ -16,6 +16,7 @@ function mainFunction() {
   let twitter = document.getElementById('twitter');
   let link = document.getElementById('githubLink');
   let company = document.getElementById('company');
+  let noResults = document.getElementById('noResults');
 
   if (username === '') {
     alert('ველი ცარიელია!');
@@ -27,6 +28,9 @@ function mainFunction() {
     .then((data) => {
       if (data.message !== 'Not Found') {
         acc.style.display = 'flex';
+        noResults.style.display = 'none';
+      } else {
+        noResults.style.display = 'block';
       }
       let avatar = document.createElement('img');
       avatar.src = data.avatar_url;
@@ -90,4 +94,9 @@ dark.addEventListener('click', function (event) {
     icn.src = './assets/moon.svg';
     darkLight.textContent = 'Dark';
   }
+
+  // let noResults = document.getElementById('noResults');
+  // if (data.message === 'Not Found') {
+  //   noResults.style.display = 'block';
+  // }
 });

@@ -60,12 +60,19 @@ body {
   width: 640px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #inp {
   width: 50%;
   border: none;
   cursor: pointer;
+}
+#noResults {
+  width: 30%;
+  color: var(--result-color);
+  text-align: right;
+  display: none;
 }
 #search {
   width: 106px;
@@ -186,4 +193,10 @@ body.dark-mode {
 }
 .social.dark-mode {
   color: var(--dark-one);
+}
+
+@media screen and (max-with: 750px) {
+  * {
+    max-width: 100%;
+  }
 }
