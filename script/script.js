@@ -94,9 +94,4 @@ dark.addEventListener('click', function (event) {
     icn.src = './assets/moon.svg';
     darkLight.textContent = 'Dark';
   }
-
-  // let noResults = document.getElementById('noResults');
-  // if (data.message === 'Not Found') {
-  //   noResults.style.display = 'block';
-  // }
 });
