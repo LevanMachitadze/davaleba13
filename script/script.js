@@ -1,5 +1,7 @@
 let btn = document.getElementById('search');
 let acc = document.getElementById('acc');
+let avatar = document.createElement('img');
+let respAvatar = document.createElement('img');
 
 function mainFunction() {
   let url = `https://api.github.com/users/`;
@@ -33,8 +35,6 @@ function mainFunction() {
       } else {
         noResults.style.display = 'block';
       }
-      let avatar = document.createElement('img');
-      let respAvatar = document.createElement('img');
       avatar.src = data.avatar_url;
       respAvatar.src = data.avatar_url;
       responsiveAvatar.appendChild(avatar);
@@ -95,8 +95,10 @@ dark.addEventListener('click', function (event) {
   if (i++ % 2 !== 0) {
     icn.src = './assets/002-sun.svg';
     darkLight.textContent = 'Light';
+    inp.style.backgroundColor = '#1E2A47';
   } else {
     icn.src = './assets/moon.svg';
     darkLight.textContent = 'Dark';
+    inp.style.backgroundColor = '#FFFFFF';
   }
 });
