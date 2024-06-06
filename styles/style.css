@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 :root {
   --first-color: #0079ff;
@@ -18,12 +17,17 @@
 }
 body {
   width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: center;
   background-color: var(--sixth-color);
 }
 .main-div {
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .header {
   display: flex;
@@ -88,7 +92,8 @@ body {
 }
 #acc {
   width: 100%;
-  height: 419px;
+  max-width: 1440px;
+
   border-radius: 15px;
   background-color: var(--seventh-color);
   padding: 48px;
@@ -97,6 +102,9 @@ body {
 .avatar {
   width: 117px;
   margin-right: 38px;
+}
+.responsive-avatar {
+  display: none;
 }
 .results {
   width: 480px;
@@ -195,8 +203,44 @@ body.dark-mode {
   color: var(--dark-one);
 }
 
-@media screen and (max-with: 750px) {
-  * {
-    max-width: 100%;
+@media screen and (max-width: 750px) {
+  .desctop-avatar {
+    display: none;
+  }
+  .responsive-avatar {
+    display: block;
+  }
+  #acc {
+    justify-content: center;
+  }
+  #name {
+    flex-direction: column;
+  }
+  .acc-up {
+    display: flex;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-div {
+    width: 100%;
+  }
+  .header {
+    margin-left: 32px;
+  }
+  .social-up {
+    flex-direction: column;
+  }
+  .social-down {
+    flex-direction: column;
+  }
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .acc-up {
+    width: 100%;
+  }
+  #acc {
+    width: 100%;
   }
 }

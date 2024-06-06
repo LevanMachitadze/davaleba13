@@ -1,6 +1,5 @@
 let btn = document.getElementById('search');
 let acc = document.getElementById('acc');
-let icon = document.querySelector('.avatar');
 
 function mainFunction() {
   let url = `https://api.github.com/users/`;
@@ -17,6 +16,8 @@ function mainFunction() {
   let link = document.getElementById('githubLink');
   let company = document.getElementById('company');
   let noResults = document.getElementById('noResults');
+  let icon = document.querySelector('.desctop-avatar');
+  let responsiveAvatar = document.querySelector('.responsive-avatar');
 
   if (username === '') {
     alert('ველი ცარიელია!');
@@ -33,9 +34,13 @@ function mainFunction() {
         noResults.style.display = 'block';
       }
       let avatar = document.createElement('img');
+      let respAvatar = document.createElement('img');
       avatar.src = data.avatar_url;
-      icon.appendChild(avatar);
+      respAvatar.src = data.avatar_url;
+      responsiveAvatar.appendChild(avatar);
+      icon.appendChild(respAvatar);
       avatar.classList.add('avatar');
+      respAvatar.classList.add('avatar');
       name.textContent = data.login;
       joinDate.textContent = `joined ${data.created_at}`;
       bio.textContent = data.bio;
